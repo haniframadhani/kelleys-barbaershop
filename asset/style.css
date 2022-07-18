@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&display=swap');
+@import url(metropolis.css);
+
+:root {
+	--white: #fff;
+	--black: #222;
+	--primary: #9B7653;
+	--primary-shades-500: #3E2F21;
+	--primary-shades-600: #2F2319;
+	--primary-shades-700: #1F1811;
+	--secondary-tint-500: #A9BCCD;
+	--secondary-shades-800: #080C10;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Metropolis-Regular', sans-serif;
+	margin-top: 10.4em;
+	overflow-x: hidden;
+}
+
+body,
+#about,
+#barber,
+#testimonial,
+#footer {
+	scroll-margin-top: 10.4em;
+}
+
+h1 {
+	font-family: 'Metropolis-Bold', sans-serif;
+}
+
+.main-title {
+	color: var(--primary);
+	font-size: 4em;
+}
+
+.title {
+	font-family: 'Cormorant SC', serif;
+}
+
+.title-white {
+	color: var(--white);
+}
+
+.title-dark {
+	color: var(--black);
+}
+
+.capitalize {
+	text-transform: capitalize;
+}
+
+.bg-dark {
+	background-color: var(--primary-shades-700);
+}
+
+.img-fluid {
+	max-width: 100%;
+	height: auto
+}
+
+.container {
+	--bs-gutter-x: 1.5rem;
+	--bs-gutter-y: 0;
+	width: 100%;
+	padding-right: calc(var(--bs-gutter-x) * .5);
+	padding-left: calc(var(--bs-gutter-x) * .5);
+	margin-right: auto;
+	margin-left: auto
+}
+
+.nav-links {
+	color: var(--white) !important;
+	height: 100%;
+}
+
+.a-unset {
+	text-decoration: none;
+}
+
+.a-unset:visited {
+	color: unset;
+}
+
+.li-unset {
+	list-style: none;
+}
+
+.d-flex {
+	display: flex;
+}
+
+.f-row {
+	flex-direction: row;
+}
+
+.f-column {
+	flex-direction: column;
+}
+
+.f-res {
+	flex-direction: row;
+}
+
+.fixed-top {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 1030;
+}
+
+nav {
+	background-color: var(--primary);
+	padding: 2em 0;
+}
+
+.logo {
+	color: var(--white);
+	font-size: 2rem;
+}
+
+.align-items-center {
+	align-items: center;
+}
+
+.align-items-start {
+	align-items: flex-start;
+}
+
+.justify-content-center {
+	justify-content: center;
+}
+
+.text-white {
+	color: var(--white) !important;
+}
+
+.text-black {
+	color: var(--black) !important;
+}
+
+.m-auto {
+	margin: auto;
+}
+
+.navbar {
+	gap: .5em;
+}
+
+.f-warp {
+	flex-wrap: wrap;
+}
+
+nav ul {
+	gap: 1em;
+	/* padding: 1.25em 0; */
+}
+
+.navlink-hover::after {
+	content: '';
+	display: block;
+	width: 0;
+	height: 2px;
+	background: var(--white);
+	transition: width .3s;
+	-webkit-transition: width .3s;
+	-moz-transition: width .3s;
+	-ms-transition: width .3s;
+	-o-transition: width .3s;
+}
+
+.navlink-hover:hover::after {
+	width: 100%;
+	transition: width .3s;
+	-webkit-transition: width .3s;
+	-moz-transition: width .3s;
+	-ms-transition: width .3s;
+	-o-transition: width .3s;
+}
+
+.nav-link:active,
+.navlink-hover:active::after {
+	color: var(--primary-shades-700) !important;
+}
+
+.navlink-hover:active::after {
+	background: var(--primary-shades-700);
+}
+
+.inline-block {
+	display: inline-block;
+}
+
+.p-block {
+	display: block;
+}
+
+.btn {
+	background-color: var(--primary-shades-500);
+	padding: 1.25em 1.8em;
+	position: relative;
+	font-family: 'Metropolis-Regular', sans-serif;
+	font-size: 1em;
+	transition: .3s;
+	border: none;
+	border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-ms-border-radius: 8px;
+	-o-border-radius: 8px;
+	-webkit-transition: .3s;
+	-moz-transition: .3s;
+	-ms-transition: .3s;
+	-o-transition: .3s;
+}
+
+.btn:hover {
+	background-color: var(--primary-shades-600);
+}
+
+.btn-a:focus {
+	background-color: var(--primary-shades-700);
+}
+
+.btn-button:active {
+	background-color: var(--primary-shades-700);
+}
+
+.hero {
+	height: calc(100vh - 10.4em);
+	/* height: 100vh; */
+	background-image: url(image/vahid-kanani-zbIfItA5Iq0-unsplash.jpg);
+	background-position: center;
+	background-size: cover;
+}
+
+.hero-text {
+	height: 100%;
+	width: 100%;
+	gap: 1.5em;
+	backdrop-filter: grayscale(1);
+	-webkit-backdrop-filter: grayscale(1);
+	-moz-backdrop-filter: grayscale(1);
+	-ms-backdrop-filter: grayscale(1);
+	-o-backdrop-filter: grayscale(1);
+}
+
+.paragraph {
+	font-size: 1.5em;
+}
+
+.text-justify {
+	text-align: justify;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-left {
+	text-align: start;
+}
+
+#about,
+#barber,
+#testimonial,
+#footer {
+	padding: 5em 0;
+}
+
+.about-content,
+.barber-gallery,
+.testimonial-content,
+.footer-content {
+	margin-top: 2.5em;
+	gap: 1em;
+}
+
+.barber {
+	background-color: var(--primary-shades-700);
+}
+
+.img-container {
+	position: relative;
+	overflow: hidden;
+}
+
+.overlay {
+	background-color: var(--secondary-shades-800);
+	padding: 0.6em 0;
+	position: absolute;
+	top: 100;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	opacity: 0;
+	transition: .3s ease-in;
+	transform: translateY(35px);
+	-webkit-transform: translateY(35px);
+	-moz-transform: translateY(35px);
+	-ms-transform: translateY(35px);
+	-o-transform: translateY(35px);
+	-webkit-transition: .3s ease-in;
+	-moz-transition: .3s ease-in;
+	-ms-transition: .3s ease-in;
+	-o-transition: .3s ease-in;
+}
+
+.image-barber {
+	transition: .3s;
+	filter: grayscale(1);
+	-webkit-filter: grayscale(1);
+	-webkit-transition: .3s;
+	-moz-transition: .3s;
+	-ms-transition: .3s;
+	-o-transition: .3s;
+}
+
+.img-container:hover .image-barber {
+	filter: grayscale(0);
+	-webkit-filter: grayscale(0);
+	transform: translateY(0);
+	-webkit-transform: translateY(0);
+	-moz-transform: translateY(0);
+	-ms-transform: translateY(0);
+	-o-transform: translateY(0);
+}
+
+.img-container:hover .overlay {
+	opacity: 1;
+	transition: .3s ease-out;
+	transform: rotateY(0);
+	-webkit-transform: rotateY(0);
+	-moz-transform: rotateY(0);
+	-ms-transform: rotateY(0);
+	-o-transform: rotateY(0);
+	-webkit-transition: .3s ease-out;
+	-moz-transition: .3s ease-out;
+	-ms-transition: .3s ease-out;
+	-o-transition: .3s ease-out;
+}
+
+.img-testimonial {
+	margin-top: 1.25em;
+	width: 180px;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+}
+
+.testimonial-content {
+	gap: 0;
+}
+
+.costumer {
+	font-family: 'Metropolis-Medium', sans-serif;
+	margin-top: 1em;
+	margin-bottom: .5em;
+}
+
+footer {
+	background-color: var(--primary-shades-700);
+}
+
+input {
+	padding: .6rem;
+	display: inline-block;
+	border: none;
+	font-family: 'Metropolis-Reguler', sans-serif;
+	width: 100%;
+	height: 40px;
+	border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-ms-border-radius: 8px;
+	-o-border-radius: 8px;
+}
+
+@media (max-width:768px) {
+	.f-res {
+		flex-direction: column;
+	}
+}

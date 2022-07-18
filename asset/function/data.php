@@ -1,0 +1,2 @@
+<?php
+$barbers = [["name" => "Devon Dorsey", "image" => "devon.webp"], ["name" => "Garret Goodman", "image" => "garret.webp"], ["name" => "Colby Burch", "image" => "colby.webp"], ["name" => "Luke Douglas", "image" => "luke.webp"]];
