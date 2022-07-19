@@ -4,9 +4,9 @@ require 'asset/function/data.php';
 
 if (isset($_POST["submit"])) {
     if (book($_POST) == 0) {
-        echo "<script>alert('berhasil');</script>";
+        echo "<script>alert('see you in barber');</script>";
     } else {
-        echo "<script>alert('gagal');</script>";
+        echo "<script>alert('error to process book');</script>";
     }
 }
 
