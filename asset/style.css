@@ -36,6 +36,54 @@ body,
 	scroll-margin-top: 10.4em;
 }
 
+table,
+th,
+td {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+table {
+	/* min-width: 300px; */
+	width: 100%;
+}
+
+tr:nth-child(even) {
+	background-color: var(--primary-shades-500);
+	color: var(--white);
+}
+
+tr:nth-child(odd) {
+	color: var(--black);
+}
+
+th {
+	height: 50px;
+	background-color: var(--primary);
+	color: var(--white);
+}
+
+td {
+	height: 30px;
+	padding: .5em 1em;
+}
+
+td:first-child {
+	width: 33%;
+}
+
+td:first-child+td {
+	width: 33%;
+}
+
+td:first-child+td+td {
+	width: 33%;
+}
+
+.table {
+	overflow-x: auto;
+}
+
 h1 {
 	font-family: 'Metropolis-Bold', sans-serif;
 }
@@ -151,6 +199,10 @@ nav {
 	color: var(--black) !important;
 }
 
+.mt-2 {
+	margin-top: 2rem !important;
+}
+
 .m-auto {
 	margin: auto;
 }
@@ -241,7 +293,7 @@ nav ul {
 .hero {
 	height: calc(100vh - 10.4em);
 	/* height: 100vh; */
-	background-image: url(image/vahid-kanani-zbIfItA5Iq0-unsplash.jpg);
+	background-image: url(image/vahid-kanani-zbIfItA5Iq0-unsplash.webp);
 	background-position: center;
 	background-size: cover;
 }
@@ -388,6 +440,14 @@ input {
 	-moz-border-radius: 8px;
 	-ms-border-radius: 8px;
 	-o-border-radius: 8px;
+}
+
+.hidden {
+	color: var(--primary-shades-700);
+}
+
+.hidden:hover {
+	color: var(--white);
 }
 
 @media (max-width:768px) {
