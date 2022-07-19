@@ -62,14 +62,14 @@ if (isset($_POST["submit"])) {
             <h1 class="capitalize text-white">meet your barber</h1>
             <div class="barber-gallery d-flex f-res justify-content-center align-items-center">
                 <?php foreach ($barbers as $barber) : ?>
-                    <div class="img-container">
-                        <img src="asset/image/<?= $barber["image"] ?>" class="img-fluid p-block image-barber" alt="">
-                        <div class="overlay">
-                            <div class="text text-white text-center">
-                                <?= $barber["name"] ?>
-                            </div>
+                <div class="img-container">
+                    <img src="asset/image/<?= $barber["image"] ?>" class="img-fluid p-block image-barber" alt="">
+                    <div class="overlay">
+                        <div class="text text-white text-center">
+                            <?= $barber["name"] ?>
                         </div>
                     </div>
+                </div>
                 <?php endforeach; ?>
             </div>
         </div>
@@ -100,33 +100,64 @@ if (isset($_POST["submit"])) {
             <div class="container footer-content">
                 <form class="d-flex f-column justify-content-center align-items-start" action="" method="post">
                     <label for="name" class="text-white">name : </label><br>
-                    <input type="text" name="name" id="name" placeholder="enter your name" require><br>
+                    <input type="text" name="name" id="name" placeholder="enter your name" autocomplete="off"
+                        require><br>
                     <label for="email" class="text-white">phone : </label><br>
-                    <input type="number" name="phone" id="phone" placeholder="enter your phone number" require><br>
+                    <input type="number" name="phone" id="phone" placeholder="enter your phone number"
+                        autocomplete="off" require><br>
                     <label for="time" class="text-white">date : </label><br>
                     <input type="datetime-local" name="time" id="time" require><br>
-                    <button type="submit" value="submit" name="submit" class="btn btn-button capitalize a-unset inline-block text-white m-auto">book
+                    <button type="submit" value="submit" name="submit"
+                        class="btn btn-button capitalize a-unset inline-block text-white m-auto">book
                         now</button>
                 </form>
             </div>
             <div class="attribution mt-2 text-white text-center">
                 <a href="book.php" class="hidden">see custumer</a>
-                <p>Photo by <a href="https://unsplash.com/@reis26af?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" class="text-white">Reis
-                        26</a> on <a href="https://unsplash.com/s/visual/9eb78f60-6549-4db0-9c45-2f38fce6e53c?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" class="text-white">Unsplash</a>
+                <p>Photo by <a
+                        href="https://unsplash.com/@reis26af?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+                        class="text-white">Reis
+                        26</a> on <a
+                        href="https://unsplash.com/s/visual/9eb78f60-6549-4db0-9c45-2f38fce6e53c?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+                        class="text-white">Unsplash</a>
                 </p>
-                <p>Photo by <a href="https://unsplash.com/@albertdera?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" class="text-white">Albert Dera</a> on <a href="https://unsplash.com/s/visual/e0e519d5-fcc8-4d1d-abe0-2f89719d980d?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" class="text-white">Unsplash</a>
+                <p>Photo by <a
+                        href="https://unsplash.com/@albertdera?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+                        class="text-white">Albert Dera</a> on <a
+                        href="https://unsplash.com/s/visual/e0e519d5-fcc8-4d1d-abe0-2f89719d980d?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+                        class="text-white">Unsplash</a>
                 </p>
                 <p>
-                    Photo by <a href="https://unsplash.com/@mebradus?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" class="text-white">M. Brauer</a> on <a href="https://unsplash.com/s/visual/5dc9b256-5ee8-4f3b-a51f-dc0a8715e3a2?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" class="text-white">Unsplash</a>
+                    Photo by <a
+                        href="https://unsplash.com/@mebradus?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+                        class="text-white">M. Brauer</a> on <a
+                        href="https://unsplash.com/s/visual/5dc9b256-5ee8-4f3b-a51f-dc0a8715e3a2?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+                        class="text-white">Unsplash</a>
 
                 </p>
-                <p>Photo by <a href="https://unsplash.com/@hairspies?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" class="text-white">Hair Spies</a> on <a href="https://unsplash.com/s/visual/3f62f9c8-bcb8-4b95-b4d2-0dffa0d025cb?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" class="text-white">Unsplash</a>
+                <p>Photo by <a
+                        href="https://unsplash.com/@hairspies?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+                        class="text-white">Hair Spies</a> on <a
+                        href="https://unsplash.com/s/visual/3f62f9c8-bcb8-4b95-b4d2-0dffa0d025cb?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+                        class="text-white">Unsplash</a>
                 </p>
-                <p>Photo by <a href="https://unsplash.com/@vshnv_c?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" class="text-white">Vaishnav Chogale</a> on <a href="https://unsplash.com/s/visual/e3563fc8-14de-4166-9325-a43d0514b6c3?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" class="text-white">Unsplash</a>
+                <p>Photo by <a
+                        href="https://unsplash.com/@vshnv_c?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+                        class="text-white">Vaishnav Chogale</a> on <a
+                        href="https://unsplash.com/s/visual/e3563fc8-14de-4166-9325-a43d0514b6c3?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+                        class="text-white">Unsplash</a>
                 </p>
-                <p>Photo by <a href="https://unsplash.com/es/@vahidkanani?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" class="text-white">vahid kanani</a> on <a href="https://unsplash.com/s/visual/a79927bd-a122-489b-af41-b9d53ca49835?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" class="text-white">Unsplash</a>
+                <p>Photo by <a
+                        href="https://unsplash.com/es/@vahidkanani?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+                        class="text-white">vahid kanani</a> on <a
+                        href="https://unsplash.com/s/visual/a79927bd-a122-489b-af41-b9d53ca49835?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+                        class="text-white">Unsplash</a>
                 </p>
-                <p>Photo by <a href="https://unsplash.com/@wellsschan?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" class="text-white">Wells Chan</a> on <a href="https://unsplash.com/s/visual/19b30120-5d72-4b06-bcf2-f507f3e13172?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" class="text-white">Unsplash</a>
+                <p>Photo by <a
+                        href="https://unsplash.com/@wellsschan?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+                        class="text-white">Wells Chan</a> on <a
+                        href="https://unsplash.com/s/visual/19b30120-5d72-4b06-bcf2-f507f3e13172?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+                        class="text-white">Unsplash</a>
                 </p>
             </div>
         </div>
